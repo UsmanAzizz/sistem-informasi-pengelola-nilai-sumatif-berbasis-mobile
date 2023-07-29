@@ -1,0 +1,56 @@
+   Padding(
+            padding: const EdgeInsets.fromLTRB(15, 8, 8, 0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RichText(
+                        text: TextSpan(
+                          text: 'Kelas     ',
+                          style: TextStyle(
+                            fontFamily: 'Figtree',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: selectedClass,
+                              style: TextStyle(
+                                fontFamily: 'Figtree',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                                color: Colors.blueGrey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                           ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 120,
+                  height: 35,
+                  padding: const EdgeInsets.fromLTRB(7, 7.5, 8, 0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(color: Colors.black, width: 0.4),
+                  ),
+                  child: TextFormField(
+                    controller: searchController,
+                    decoration: InputDecoration(
+                      hintText: 'Cari siswa',
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.zero,
+                      isDense: true,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
